@@ -1,5 +1,5 @@
-
-function combined(listST, listOfStuff2){
+const Math = require('mathjs');
+let combineFunc = (listST, listOfStuff2) => {
     let trashNames = ['Trash', 'Litter', 'Pollution', 'Waste', 'Plastic', 'Plastic Bottle', 'Scrap', 'Recycling'];
     
     let totalScore = 0;
@@ -13,8 +13,8 @@ function combined(listST, listOfStuff2){
                 if(trashNames[i] == (listST[j][0])){
                     matchedLabels.push(trashNames[i]);
                     numObjectsFound++;
-                    totalSum += mid.score; //ayy fix this and the line below
-                    totalTopic += mid.topicality;
+                    totalScore += listST[j][1]; //ayy fix this and the line below
+                    totalTopic += listST[j][2];
                 }
             }
         }
@@ -54,6 +54,14 @@ function combined(listST, listOfStuff2){
     averageScore2 *= 1000;
     averageTopic2 *= 1000;
 
-    return ((averageScore + averageTopic) / 2 + (averageScore2 + averageTopic2) / 2) / 2;
+    if(Math.abs(averageScore - averageScore2) <= 1.5 * Math.std(secondST)){
+        averageScore2 *= 1.75;
+        averageTopic2 *= 1.75;
+    } else if(Math.abs(averageScore - averageScore2) <= 2.5 * Math.std(secondST)){
+        averageScore2 *= 1.25;
+        averageTopic2 *= 1.25
+    }
+    return ((averageScore + averageTopic) / 2 - (averageScore2 + averageTopic2) / 2)*10;
 }
-
+module.exports = combineFunc;
+//export default combineFunc;
