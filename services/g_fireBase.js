@@ -42,6 +42,7 @@ async function quickstart() {
     let array = [];
     let array2 = [];
     labels.forEach(label => {
+        console.log(label.description+" "+label.score+" "+label.topicality);
         array.push([label.description,label.score, label.topicality]);
     })
     const [result2] = await client.labelDetection('C:/Users/menga/Documents/GitHub/trash3/services/beach2.jpg');
@@ -54,14 +55,17 @@ async function quickstart() {
   }
 
 
+  let x = 0;
 quickstart().then((myNum) => {
     var db = admin.firestore();
 var docRef = db.collection('users').doc('trash');//stores a new folder
-
+x = myNum
+console.log(x);
 var setAda = docRef.set({
     myNum
 })
 });
+module.exports = x;
 
 // // Initialize the default app
 // var defaultApp = firebase.initializeApp(config);

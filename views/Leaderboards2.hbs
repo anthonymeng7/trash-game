@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Pick Me Up</title>
+<!-- <link rel = "stylesheet" type="text/css" href = "style2.css"/> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-blue w3-large w3-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="Home" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Home</a>
+    <a href="Profile" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Profile</a>
+    <a href="cleanUp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Clean up</a>
+    <a href="Challenges" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Challenges</a>
+    <a href="Leaderboards" class="w3-bar-item w3-button w3-padding-large w3-blue w3-hover-purple">Leaderboards</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="Home" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="Profile" class="w3-bar-item w3-button w3-padding-large">Profile</a>
+    <a href="cleanUp" class="w3-bar-item w3-button w3-padding-large">Clean Up</a>
+    <a href="Challenges" class="w3-bar-item w3-button w3-padding-large">Challenges</a>
+   
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-center 
+w3-green
+" style="padding:128px 16px">
+        <!-- <img src = "cleanOne.jpg" alt = "A picture of a beach in its natural habitat" width="210" height ="116"> -->
+        
+
+  <h1 class="w3-margin w3-jumbo">Leaderboards</h1>
+  <p class="w3-xlarge"></p>
+</header>
+
+<div class="w3-container w3-light-grey w3-padding-64 w3-xxlarge" id="menu">
+        <div class="w3-content">
+          <h1 class="w3-center w3-large" style="margin-bottom:64px">Our rankings are in three areas: Daily, or most number of points gained in the day, Local, or top number of points within a 20 mile radius of the cities and communities we partner with and Global, or top number of points in the world.</h1>
+          <div class="w3-row w3-center w3-border w3-border-dark-green">
+            <a href="Leaderboards" onclick="openMenu(event, 'Daily');" id="myLink">
+              <div class="w3-col s4 tablink w3-padding-large w3-hover-blue w3-green">Daily</div>
+            </a>
+            <a href="Leaderboards2" onclick="openMenu(event, 'Local');">
+              <div class="w3-col s4 tablink w3-padding-large w3-hover-purple w3-blue">Local</div>
+            </a>
+            <a href="Leaderboards3" onclick="openMenu(event, 'Global');">
+              <div class="w3-col s4 tablink w3-padding-large w3-hover-blue w3-green">Global</div>
+            </a>
+          </div>
+      
+          <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+            <h1><b>@Hackerman</b> <span class="w3-right w3-tag w3-dark-grey w3-round">1st</span></h1>
+            <p class="w3-text-grey">Total Local Points: 213897 points</p>
+            <hr>
+         
+            <h1><b>@EmmaDuck88</b> <span class="w3-right w3-tag w3-dark-grey w3-round">2nd</span></h1>
+            <p class="w3-text-grey">Total Local Points: 1734856 points</p>
+            <hr>
+            
+            <h1><b>@hero</b><span class="w3-tag w3-purple w3-round">Fastest Climber!</span><span class="w3-right w3-tag w3-dark-grey w3-round">3rd</span></h1>
+            <p class="w3-text-grey">Total Local Points: 167482 points</p>
+            <hr>
+      
+            <h1><b>@Kitirs</b> <span class="w3-right w3-tag w3-dark-grey w3-round">4th</span></h1>
+            <p class="w3-text-grey">Total Local Points: 156384 points</p>
+            <hr>
+            <h1><b>@PKanchi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">5th</span></h1>
+            <p class="w3-text-grey">Total Local Points: 140912 points</p>
+            <hr>
+          </div>
+          <br>
+        </div>
+      </div>
+   
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+      <div class="w3-xlarge w3-padding-32">
+          <form action = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </form>
+     </div>
+     <p>Created at LA Hacks</p>
+    </footer>
+    
+    <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+    
+    </body>
+    </html>
+    

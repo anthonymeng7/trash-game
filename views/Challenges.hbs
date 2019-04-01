@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Pick Me Up</title>
+<!-- <link rel = "stylesheet" type="text/css" href = "style2.css"/> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-green" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="Home" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Home</a>
+    <a href="Profile" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Profile</a>
+    <a href="cleanUp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Clean Up</a>
+    <a href="Challenges" class="w3-bar-item w3-button w3-padding-large w3-blue w3-hover-purple">Challenges</a>
+    <a href="Leaderboards" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-blue">Leaderboards</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="Home" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="Profile" class="w3-bar-item w3-button w3-padding-large">Profile</a>
+    <a href="cleanUp" class="w3-bar-item w3-button w3-padding-large">Clean Up</a>
+    <a href="Leaderboards" class="w3-bar-item w3-button w3-padding-large">Leaderboards</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container
+w3-green
+" style="padding:128px 16px">
+<style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;  /* The height is 400 pixels */
+      width: 100%;  /* The width is the width of the web page */
+     }
+  </style>
+
+  <h1 class="w3-jumbo w3-center">Challenges</h1>
+  <p class="w3-xlarge w3-center">Point Boosters and Local Challenges</p>
+  <!-- <form action = "cleanUp.html">
+  <button class="w3-button w3-blue w3-padding-large w3-large w3-margin-top w3-text-white">Start Cleaning</button>
+</form> -->
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Find yourself on the map, win extra points and prizes.</h1>
+      <h3 class="w3-text-grey">With Challenges we work with cities and communities to offer prizes and point multipliers. Find where you are on the map and see if your community has partnered with us.</h3>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img src="http://clipart-library.com/images/kc8ypn6cr.png" alt="Boss"  style = "width: 60%" class="">
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <h3 class = "w3-center">Your Location</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+    // Initialize and add the map
+    function initMap() {
+    // The location of Uluru
+    var uluru = {lat: 34.070580, lng: -118.446826}; 
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk7n6SPY5eVoWW3Cu6Jq0xxr0btanLm2Q&callback=initMap">
+    </script>
+</div>
+
+<div class="w3-row-padding w3-white w3-padding-64 w3-container">
+<h2>Events Near You:</h2>
+<h4> Clean LA : 2x points for trash cleaned within a 20 mile radius of Los Angeles and a 5000 dollar prize pool for top ten Regional Points sponsored by the city of Los Angeles</h4>
+<h4></h4>
+<h4> Dockweiler Beach Clean up, 1.5x points between 8 AM and 8 PM</h4>
+
+
+</div>
+
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: "Plans to protect air and water, wilderness and wildlife are in fact plans to protect man" - Stewart Udall</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+      <form action = "https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </form>
+ </div>
+ <p>Created at LA Hacks</p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
